@@ -51,7 +51,7 @@
 		class="org.springframework.jndi.JndiObjectFactoryBean"
 		lazy-init="false">
 		<property name="jndiName">
-			<value>java:comp/env/jdbc/datasouce</value>
+			<value>java:comp/env/jdbc/datasource</value>
 		</property>
 	</bean>
 
@@ -87,7 +87,7 @@
 	</bean>
 
 	<bean id="simpleJdbcInsert" name="simpleJdbcInsert"
-		class="br.com.framework.implementacao.crud.SimpleJdbcInsertImplents"
+		class="br.com.framework.implementacao.crud.SimpleJdbcInsertImpl"
 		lazy-init="false">
 		<constructor-arg name="dataSource"
 			ref="springDataSource" />
@@ -138,7 +138,7 @@
 	<!-- Bean de contexto application -->
 	<bean id="reportUtil" class="br.com.project.report.util.ReportUtil"/>
 
-	<bean id="utilFramework" class="br.com.framework.utils.UtilFramework" scope="session"/>
+	<!--  <bean id="utilFramework" class="br.com.framework.utils.UtilFramework" scope="session"/>  -->
 	
 
 </beans>
